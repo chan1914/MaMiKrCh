@@ -10,7 +10,8 @@ namespace MaMiKrCh.Models.ProductModel
 		public int Id { get; set; }
 		public string Name { get; set; }
 		public string SalesPitch { get; set; }
-		public List<MarketingMaterial> MarketingMaterials { get; set; }
+
+		public List<IMarketingMaterial> MarketingMaterials { get; set; }
 
 	}
 }

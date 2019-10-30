@@ -5,11 +5,14 @@ using System.Threading.Tasks;
 
 namespace MaMiKrCh.Models.ProductModel
 {
-	public class MarketingText:MarketingMaterial
+	public class MarketingText:IMarketingMaterial
 	{
-		public string Text { get; set; }
 
-		public override string ToHtml()
+		public string Text { get; set; }
+		
+		public int Id { get; set; }
+
+		public string ToHtml()
 		{
 			throw new NotImplementedException();
 		}
