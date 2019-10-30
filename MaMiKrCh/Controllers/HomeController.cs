@@ -19,7 +19,7 @@ namespace MaMiKrCh.Controllers
         {
             return View();
         }
-        public IActionResult Store()
+        public IActionResult Product()
         {
             return View();
         }
