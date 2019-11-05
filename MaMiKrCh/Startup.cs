@@ -38,7 +38,7 @@ namespace MaMiKrCh
 			services.AddCors();
 			
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-			//services.AddAutoMapper();
+			services.AddAutoMapper();
 			
 			// configure strongly typed settings objects
 			var appSettingsSection = Configuration.GetSection("AppSettings");

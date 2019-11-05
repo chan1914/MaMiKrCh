@@ -81,14 +81,17 @@ namespace MaMiKrCh.Controllers
 				// save 
 				_userService.Create(user, userDto.Password);
 				return Ok();
+
 			}
 			catch (AppException ex)
 			{
 				// return error message if there was an exception
 				return BadRequest(new { message = ex.Message });
+
 			}
 		}
 
+		
 		[HttpGet]
 		public IActionResult GetAll()
 		{
@@ -131,5 +134,7 @@ namespace MaMiKrCh.Controllers
 			_userService.Delete(id);
 			return Ok();
 		}
+
+
 	}
 }
