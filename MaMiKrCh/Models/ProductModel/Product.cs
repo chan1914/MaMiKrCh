@@ -8,7 +8,7 @@ namespace MaMiKrCh.Models.ProductModel
 {
 	public class Product
 	{
-		[k]
+		[Key]
 		public int Id { get; set; }
 		public string Name { get; set; }
 		public string SalesPitch { get; set; }

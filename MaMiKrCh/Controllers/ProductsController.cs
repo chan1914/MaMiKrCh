@@ -54,7 +54,7 @@ namespace MaMiKrCh.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,SalesPitch")] Product product)
+        public async Task<IActionResult> Create([Bind("Name,SalesPitch")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace MaMiKrCh.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,SalesPitch")] Product product)
+        public async Task<IActionResult> Edit(int id, [Bind("Name,SalesPitch")] Product product)
         {
             if (id != product.Id)
             {
@@ -134,8 +134,44 @@ namespace MaMiKrCh.Controllers
             return View(product);
         }
 
-        // POST: Products/Delete/5
-        [HttpPost, ActionName("Delete")]
+		// POST: Products/AddMarketingMarketingMaterial/[id]
+		[HttpGet]
+		public async Task<IActionResult> CreateMarketingMaterial(int? id)
+		{
+			if (id == null){
+				return NotFound();
+			}
+
+			Product product = await _context.Products
+				.FirstOrDefaultAsync(m => m.Id == id);
+			if (product == null)
+			{
+				return NotFound();
+			}
+
+			return View("CreateMaketingMaterial");
+		}
+
+		// POST: Products/AddMarketingMarketingMaterial/[id]
+		[HttpPost]
+		public async Task<IActionResult> CreateMarketingMaterial(int id, MarketingMaterial marketingMaterial)
+		{
+			if (ModelState.IsValid)
+			{
+				Product product = await _context.Products.FirstOrDefaultAsync(m => m.Id == id);
+				if (product == null)
+				{
+					return NotFound();
+				}
+				product.MarketingMaterials.Add(marketingMaterial);
+				await _context.SaveChangesAsync();
+				return RedirectToAction(nameof(Index));
+			}
+			return View();
+		}
+
+		// POST: Products/Delete/5
+		[HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {

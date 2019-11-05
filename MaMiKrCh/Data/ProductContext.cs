@@ -16,7 +16,5 @@ namespace MaMiKrCh.Data
 		public DbSet<Product> Products { get; set; }
 		public DbSet<MarketingText> MarketingTexts { get; set; }
 		public DbSet<MarketingMaterial> MarketingMaterials { get; set; }
-
-		
 	}
 }

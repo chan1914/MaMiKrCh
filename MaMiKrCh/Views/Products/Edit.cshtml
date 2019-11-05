@@ -29,7 +29,11 @@
         </form>
     </div>
 </div>
-
+<a asp-action="CreateMarketingMaterial" asp-route-id="@Model.Id">
+    <button class="btn btn-primary">
+        Add maketing material
+    </button>
+</a>
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
