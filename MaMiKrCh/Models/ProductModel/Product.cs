@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,10 +8,11 @@ namespace MaMiKrCh.Models.ProductModel
 {
 	public class Product
 	{
+		[k]
 		public int Id { get; set; }
 		public string Name { get; set; }
 		public string SalesPitch { get; set; }
-		public List<MarketingMaterial> MarketingMaterials { get; set; }
+		public ICollection<MarketingMaterial> MarketingMaterials { get; set; }
 
 	}
 }
