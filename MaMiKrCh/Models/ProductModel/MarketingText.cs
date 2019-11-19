@@ -11,7 +11,11 @@ namespace MaMiKrCh.Models.ProductModel
 
 		public override string ToHtml()
 		{
-			throw new NotImplementedException();
+			string htmlView = string.Empty;
+
+			htmlView += $"<p>{Text}</p>";
+
+			return htmlView;
 		}
 	}
 }

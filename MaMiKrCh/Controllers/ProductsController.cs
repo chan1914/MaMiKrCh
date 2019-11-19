@@ -10,135 +10,135 @@ using MaMiKrCh.Models.ProductModel;
 
 namespace MaMiKrCh.Controllers
 {
-    public class ProductsController : Controller
-    {
-        private readonly ProductContext _context;
+	public class ProductsController : Controller
+	{
+		private readonly ProductContext _context;
 
-        public ProductsController(ProductContext context)
-        {
-            _context = context;
-        }
+		public ProductsController(ProductContext context)
+		{
+			_context = context;
+		}
 
-        // GET: Products
-        public async Task<IActionResult> Index()
-        {
-            return View(await _context.Products.ToListAsync());
-        }
+		// GET: Products
+		public async Task<IActionResult> Index()
+		{
+			return View(await _context.Products.ToListAsync());
+		}
 
-        // GET: Products/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+		// GET: Products/Details/5
+		public async Task<IActionResult> Details(int? id)
+		{
+			if (id == null)
+			{
+				return NotFound();
+			}
 
-            var product = await _context.Products
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (product == null)
-            {
-                return NotFound();
-            }
+			var product = await _context.Products
+				.FirstOrDefaultAsync(m => m.Id == id);
+			if (product == null)
+			{
+				return NotFound();
+			}
 
-            return View(product);
-        }
+			return View(product);
+		}
 
-        // GET: Products/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
+		// GET: Products/Create
+		public IActionResult Create()
+		{
+			return View();
+		}
 
-        // POST: Products/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Name,SalesPitch")] Product product)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(product);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(product);
-        }
+		// POST: Products/Create
+		// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+		// more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public async Task<IActionResult> Create([Bind("Name,SalesPitch")] Product product)
+		{
+			if (ModelState.IsValid)
+			{
+				_context.Add(product);
+				await _context.SaveChangesAsync();
+				return RedirectToAction(nameof(Index));
+			}
+			return View(product);
+		}
 
-        // GET: Products/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+		// GET: Products/Edit/5
+		public async Task<IActionResult> Edit(int? id)
+		{
+			if (id == null)
+			{
+				return NotFound();
+			}
 
-            var product = await _context.Products.FindAsync(id);
-            if (product == null)
-            {
-                return NotFound();
-            }
-            return View(product);
-        }
+			var product = await _context.Products.FindAsync(id);
+			if (product == null)
+			{
+				return NotFound();
+			}
+			return View(product);
+		}
 
-        // POST: Products/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Name,SalesPitch")] Product product)
-        {
-            if (id != product.Id)
-            {
-                return NotFound();
-            }
+		// POST: Products/Edit/5
+		// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+		// more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public async Task<IActionResult> Edit(int id, [Bind("Name,SalesPitch")] Product product)
+		{
+			if (id != product.Id)
+			{
+				return NotFound();
+			}
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(product);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!ProductExists(product.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(product);
-        }
+			if (ModelState.IsValid)
+			{
+				try
+				{
+					_context.Update(product);
+					await _context.SaveChangesAsync();
+				}
+				catch (DbUpdateConcurrencyException)
+				{
+					if (!ProductExists(product.Id))
+					{
+						return NotFound();
+					}
+					else
+					{
+						throw;
+					}
+				}
+				return RedirectToAction(nameof(Index));
+			}
+			return View(product);
+		}
 
-        // GET: Products/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+		// GET: Products/Delete/5
+		public async Task<IActionResult> Delete(int? id)
+		{
+			if (id == null)
+			{
+				return NotFound();
+			}
 
-            var product = await _context.Products
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (product == null)
-            {
-                return NotFound();
-            }
+			var product = await _context.Products
+				.FirstOrDefaultAsync(m => m.Id == id);
+			if (product == null)
+			{
+				return NotFound();
+			}
 
-            return View(product);
-        }
+			return View(product);
+		}
 
 		// POST: Products/AddMarketingMarketingMaterial/[id]
 		[HttpGet]
 		public async Task<IActionResult> CreateMarketingMaterial(int? id)
 		{
-			if (id == null){
+			if (id == null) {
 				return NotFound();
 			}
 
@@ -154,7 +154,8 @@ namespace MaMiKrCh.Controllers
 
 		// POST: Products/AddMarketingMarketingMaterial/[id]
 		[HttpPost]
-		public async Task<IActionResult> CreateMarketingMaterial(int id, MarketingMaterial marketingMaterial)
+		[ValidateAntiForgeryToken]
+		public async Task<IActionResult> CreateMarketingMaterial(int id, MarketingText marketingMaterial)
 		{
 			if (ModelState.IsValid)
 			{
@@ -163,7 +164,9 @@ namespace MaMiKrCh.Controllers
 				{
 					return NotFound();
 				}
-				product.MarketingMaterials.Add(marketingMaterial);
+				marketingMaterial.Product = product;
+				marketingMaterial.Id = new int();
+				product.MarketingMaterials.Add(marketingMaterial as MarketingMaterial);
 				await _context.SaveChangesAsync();
 				return RedirectToAction(nameof(Index));
 			}

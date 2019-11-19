@@ -14,5 +14,9 @@ namespace MaMiKrCh.Models.ProductModel
 		public string SalesPitch { get; set; }
 		public ICollection<MarketingMaterial> MarketingMaterials { get; set; }
 
+		public Product()
+		{
+			MarketingMaterials = new List<MarketingMaterial>();
+		}
 	}
 }

@@ -1,4 +1,4 @@
-﻿@model MaMiKrCh.Models.ProductModel.MarketingMaterial
+﻿@model MaMiKrCh.Models.ProductModel.MarketingText
 
 @{
     ViewData["Title"] = "Create";
@@ -12,6 +12,11 @@
     <div class="col-md-4">
         <form asp-action="CreateMarketingMaterial">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Text" class="control-label"></label>
+                <input asp-for="Text" class="form-control" />
+                <span asp-validation-for="Text" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
