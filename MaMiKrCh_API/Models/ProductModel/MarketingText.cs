@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MaMiKrCh.Models.ProductModel
+namespace MaMiKrCh_API.Models.ProductModel
 {
 	public class MarketingText:MarketingMaterial
 	{
