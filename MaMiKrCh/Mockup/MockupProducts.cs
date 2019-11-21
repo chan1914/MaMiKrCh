@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using MaMiKrCh_API.Models;
-using MaMiKrCh_API.Models.ProductModel;
+using MaMiKrCh.Models;
+using MaMiKrCh.Models.ProductModel;
 
-namespace MaMiKrCh_API.Mockup
+namespace MaMiKrCh.Mockup
 {
-	public class ProductsMockupRepository
+	public class MockupProducts
 	{
 		public IEnumerable<Product> products
 		{
@@ -20,8 +20,8 @@ namespace MaMiKrCh_API.Mockup
 						Name = "CD-ORD",
 						SalesPitch = "Læse- og skriveværktøjet CD-ORD er kendt for at forløse ordblinde " +
 						"børn og voksnes potentiale for at læse, skrive og lære.",
-						
-						
+
+
 					}
 				};
 			}

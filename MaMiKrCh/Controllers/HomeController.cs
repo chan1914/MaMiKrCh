@@ -22,9 +22,7 @@ namespace MaMiKrCh.Controllers
         }
         public IActionResult Product()
         {
-			Product product = new Product();
-			var products = product.Name;
-            return View(products);
+            return View();
         }
         public IActionResult Abonnement()
         {
