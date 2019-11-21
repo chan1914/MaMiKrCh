@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MaMiKrCh.Models;
+using MaMiKrCh.Models.ProductModel;
 
 namespace MaMiKrCh.Controllers
 {
@@ -21,7 +22,9 @@ namespace MaMiKrCh.Controllers
         }
         public IActionResult Product()
         {
-            return View();
+			Product product = new Product();
+			var products = product.Name;
+            return View(products);
         }
         public IActionResult Abonnement()
         {
