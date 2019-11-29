@@ -23,6 +23,7 @@ namespace MaMiKrCh.Controllers
 		public async Task<IActionResult> Index()
 		{
 			return View(await _context.Products.ToListAsync());
+			
 		}
 
 		// GET: Products/Details/5
