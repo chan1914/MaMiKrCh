@@ -13,11 +13,22 @@ namespace MaMiKrCh_API.Controllers
     public class ProductController : ControllerBase
     {
 		[HttpGet]
-		public ICollection<Product> GetProducts()
+		[Route("GetProducts")]
+		public ActionResult<List<Product>> GetProducts()
 		{
 			List<Product> products = new List<Product>();
 
 			//products.Add();
+			products.Add(new Product
+			{
+				Name = "Test produckt 1",
+				SalesPitch = "Køb produkt 1, fordi jeg siger det!"
+			});
+			products.Add(new Product
+			{
+				Name = "Test produckt 2",
+				SalesPitch = "Køb produkt 2, fordi Allan siger du skal!"
+			});
 
 			return products.ToList();
 		}
