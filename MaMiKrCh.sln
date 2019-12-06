@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaMiKrCh", "MaMiKrCh\MaMiKr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaMiKrCh_API", "MaMiKrCh_API\MaMiKrCh_API.csproj", "{6F5F0BE9-6A6C-4FF5-972A-C33CC3F3BC75}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaMiKrChFrontEnd", "MaMiKrChFrontEnd\MaMiKrChFrontEnd.csproj", "{4F9BCB76-32A1-4CFE-8B56-2A8BED30A2D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApiProducts", "TestApiProducts\TestApiProducts.csproj", "{33E5CCA0-A0AB-4B34-AA06-4DC5C193BEE9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{6F5F0BE9-6A6C-4FF5-972A-C33CC3F3BC75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F5F0BE9-6A6C-4FF5-972A-C33CC3F3BC75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F5F0BE9-6A6C-4FF5-972A-C33CC3F3BC75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F9BCB76-32A1-4CFE-8B56-2A8BED30A2D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F9BCB76-32A1-4CFE-8B56-2A8BED30A2D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F9BCB76-32A1-4CFE-8B56-2A8BED30A2D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F9BCB76-32A1-4CFE-8B56-2A8BED30A2D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33E5CCA0-A0AB-4B34-AA06-4DC5C193BEE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33E5CCA0-A0AB-4B34-AA06-4DC5C193BEE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33E5CCA0-A0AB-4B34-AA06-4DC5C193BEE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33E5CCA0-A0AB-4B34-AA06-4DC5C193BEE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
