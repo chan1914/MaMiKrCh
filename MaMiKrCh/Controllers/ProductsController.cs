@@ -44,6 +44,8 @@ namespace MaMiKrCh.Controllers
 			return View(product);
 		}
 
+
+
 		// GET: Products/Create
 		public IActionResult Create()
 		{
