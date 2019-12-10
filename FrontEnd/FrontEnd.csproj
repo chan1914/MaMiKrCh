@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <UserSecretsId>aspnet-FrontEnd-E2504E76-605D-4EC0-B06B-C1B4E6F63C18</UserSecretsId>
+    <StartupObject></StartupObject>
   </PropertyGroup>
 
 
