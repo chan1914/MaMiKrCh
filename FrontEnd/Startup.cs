@@ -12,6 +12,7 @@ using FrontEnd.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using FrontEnd.Models.API;
 
 namespace FrontEnd
 {
@@ -22,7 +23,7 @@ namespace FrontEnd
 			Configuration = configuration;
 		}
 
-		public IConfiguration Configuration { get; }
+		public static IConfiguration Configuration { get; private set; }
 
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
@@ -34,6 +35,7 @@ namespace FrontEnd
 				.AddEntityFrameworkStores<ApplicationDbContext>();
 			services.AddControllersWithViews();
 			services.AddRazorPages();
+			services.AddTransient<ProductAPIHelper>();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
