@@ -6,10 +6,35 @@
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="Views\Home\About.cshtml" />
+    <Content Remove="Views\Home\Products.cshtml" />
+    <Content Remove="Views\Shared\Contact.cshtml" />
+    <Content Remove="Views\Shared\Elements.cshtml" />
+    <Content Remove="Views\Shared\Service.cshtml" />
+    <Content Remove="Views\Shared\Template_layout.cshtml" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="wwwroot\scss\mixins\" />
+    <Folder Include="wwwroot\scss\utilities\" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Include="Views\Home\About.cshtml" />
+    <None Include="Views\Home\Contact.cshtml" />
+    <None Include="Views\Home\Elements.cshtml" />
+    <None Include="Views\Home\Products.cshtml" />
+    <None Include="Views\Home\Service.cshtml" />
+    <None Include="Views\Shared\Template_layout.cshtml" />
   </ItemGroup>
 
 </Project>
