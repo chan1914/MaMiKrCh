@@ -1,8 +1,62 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<body>
+ <style>
+    h1 {color:#8d2138}
+    p #Nyt {color:black}
+    section 
+    {
+        box-sizing: border-box;
+    }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    #intro{
+        border: 1px solid hidden;
+        padding: 15px;
+    }
+
+    #picure1 {
+        width: 50%;
+        float: left;
+        padding: 15px;
+        border: 1px solid hidden;
+    }
+
+    #picture2 {
+        width: 50%;
+        float: left;
+        padding: 15px;
+        border: 1px solid hidden;
+    }
+    
+ </style >
+
+ <div id="intro">
+     <h1>Velkommen til Vitec MV</h1>
+     <h3>Her finder man værktøj til folk med læsevanskeligheder</h3>
+     <p id="Nyt">
+         Nyt fra Vitec MV 
+     </p>
+ </div>
+ <div id="picure1">
+     <img src="~/Billeder/1-novCD-ORD-Mac-DK-555x300.jpg" alt="Cd-ord-nyt" style="width:500px;height:300px" />
+     <h4>01.11.2019</h4>
+     <h4>CD-ORD er klar til download på din Mac</h4>
+     <p>
+         Fra i dag kan du få læse- og skrivestøtte fra CD-ORD på din Mac.
+     </p>
+     <p>
+         Nu er CD-ORD ikke længere ’kun’ et Windows-program. En helt ny Mac-version – med alle ...
+     </p>
 </div>
+ <div id="picture2">
+     <img src="~/Billeder/FINAL-DK-GIF.gif" alt="Nyt-fra-lego" style="width:500px;height:300px" />
+ </div>
+</body>
+<footer>
+    <div>
+        <p>
+
+        </p>
+    </div>
+</footer>
