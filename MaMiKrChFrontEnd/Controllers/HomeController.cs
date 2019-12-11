@@ -10,32 +10,21 @@ namespace MaMiKrChFrontEnd.Controllers
 {
 	public class HomeController : Controller
 	{
-		//public IActionResult Index()
-		//{
-		//	return View();
-		//}
-
-		public IActionResult Products()
+		public IActionResult Index()
 		{
 			return View();
 		}
 
-		public IActionResult About()
+		public IActionResult Privacy()
 		{
 			return View();
 		}
-		public IActionResult Contact()
+
+		public IActionResult ProductList()
 		{
 			return View();
 		}
-		public IActionResult Service()
-		{
-			return View();
-		}
-		public IActionResult Elements()
-		{
-			return View();
-		}
+
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 		public IActionResult Error()
 		{
