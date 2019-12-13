@@ -25,6 +25,11 @@ namespace MaMiKrChFrontEnd.Controllers
 			return View();
 		}
 
+		public IActionResult RegisterAccount()
+		{
+			return View();
+		}
+
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 		public IActionResult Error()
 		{

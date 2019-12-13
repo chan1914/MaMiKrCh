@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MaMiKrCh_API.Models.ProductModel;
+using Microsoft.EntityFrameworkCore;
 
 namespace MaMiKrCh_API.Controllers
 {
@@ -12,6 +13,13 @@ namespace MaMiKrCh_API.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
+		private readonly Product _product;
+
+		public ProductController(Product product)
+		{
+			_product = product;
+		}
+
 		[HttpGet]
 		[Route("GetProducts")]
 		public ActionResult<List<Product>> GetProducts()
@@ -33,9 +41,9 @@ namespace MaMiKrCh_API.Controllers
 			return products.ToList();
 		}
 
+		
 
 
 
-
-    }
+	}
 }

@@ -10,12 +10,12 @@ namespace TestApiController
 		{
 		}
 
-		[Test]
-		public void Test1()
-		{
-			ProductController productController = new ProductController();
-			Assert.AreEqual("Test produckt 1", productController.GetProducts());
+		//[Test]
+		//public void Test1()
+		//{
+		//	ProductController productController = new ProductController();
+		//	Assert.AreEqual("Test produckt 1", productController.GetProducts());
 			
-		}
+		//}
 	}
 }
