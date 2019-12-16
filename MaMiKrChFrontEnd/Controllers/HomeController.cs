@@ -15,12 +15,16 @@ namespace MaMiKrChFrontEnd.Controllers
 			return View();
 		}
 
-		public IActionResult Privacy()
+		public IActionResult About()
 		{
 			return View();
 		}
 
 		public IActionResult ProductList()
+		{
+			return View();
+		}
+		public IActionResult Contact()
 		{
 			return View();
 		}
