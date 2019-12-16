@@ -44,8 +44,8 @@ namespace MaMiKrChFrontEnd
 
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-		    services.AddDbContext<AccountContext>(options =>
-		            options.UseSqlServer(Configuration.GetConnectionString("AccountContext")));
+		    //services.AddDbContext<AccountContext>(options =>
+		    //        options.UseSqlServer(Configuration.GetConnectionString("AccountContext")));
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
